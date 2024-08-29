@@ -1,0 +1,14 @@
+version: '3.8'
+
+
+services:
+  bot:
+    build: .
+    container_name: 3_month_test
+    volumes:
+      - .:/app
+      - db_data:/app/db
+    command: python main.py
+
+volumes:
+  db_data:
